@@ -1,0 +1,11 @@
+String? s;
+  if(s != null)
+    {
+      print(s.length);
+    }
+  else{
+    print('undefined');
+  }
+  print(s?.length);
+  print(s?.length??'undefined');
+  print(s!.length);
