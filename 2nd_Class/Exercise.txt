@@ -1,0 +1,88 @@
+import 'package:day3/day3.dart' as day3;
+
+
+void main()
+{
+  Movies m1 = Movies(
+    name: 'titanic',
+    rating: 7.5,
+    prin: Production(name: 'abc',budget: 454516,box_office: 4545),
+    castlist: [
+      Cast(name: 'A', role: 'A'),
+      Cast(name: 'B', role: 'B'),
+      Cast(name: 'C', role: 'C'),
+    ]
+  );
+
+  Movies m2 = Movies(
+      name: 'titanic',
+      rating: 7.5,
+      prin: Production(name: 'abc',budget: 454516,box_office: 4545),
+      castlist: [
+        Cast(name: 'A', role: 'A'),
+        Cast(name: 'B', role: 'B'),
+        Cast(name: 'C', role: 'C'),
+      ]
+  );
+
+  List<Movies> ml = [m1,m2];
+  for(var mv in ml)
+    {
+      print(mv.name);
+      print('.....................');
+      print('\tCategory : ${mv.category}');
+      print('\tRating : ${mv.rating}');
+      print('\tProduction_Name: ${mv.prin?.name}');
+      print('\tProduction_Budget: ${mv.prin?.budget}');
+      print('\tProduction_BoxOffice: ${mv.prin?.box_office}');
+      
+      List<String> ca = List.generate(mv.castlist!.length, (index) => mv.castlist![index].name!);
+      String castname = ca.join(',');
+      print('\tCast : ${castname}');
+    }
+
+
+}
+
+class Movies
+{
+  String? name;
+  String? category;
+  double? rating;
+
+  Production? prin;
+  List<Cast>? castlist;
+
+  Movies({
+    this.name,
+    this.category,
+    this.prin,
+    this.castlist,
+    this.rating
+});
+
+}
+class Production
+{
+  String? name;
+  double? budget;
+  double? box_office;
+
+  Production({
+    this.name,
+    this.box_office,
+    this.budget
+});
+
+}
+class Cast
+{
+  String? name;
+  String? role;
+
+  Cast({required this.name,required this.role});
+
+
+}
+
+

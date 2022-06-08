@@ -1,0 +1,20 @@
+import 'package:day3/day3.dart' as day3;
+
+void main()
+{
+  Employee e3 = Employee(designation: 'Junior Executive', name: 'Someone', NID: 46462626);
+}
+
+class Employee{
+  String name;
+  int NID;
+  String? designation;
+  Employee({required this.name,required this.NID,this.designation})
+  {
+
+  }
+
+}
+
+
+
