@@ -1,0 +1,22 @@
+import 'package:day3/day3.dart' as day3;
+
+void main()
+{
+  List<String> items = List.generate(10, (index) => 'Item ${index+1}');
+  //print(items);
+  /*for(var item in items)
+    {
+      print(item);
+    }
+   */
+  //1 items.forEach(printElement);
+  /*2
+  items.forEach((element) {
+    print(element);
+  });*/
+  //void something(int a, Function(String) c)=> print(a);
+
+}
+
+//1 void printElement(String element)=>print(element);
+
