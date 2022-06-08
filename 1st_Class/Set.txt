@@ -1,6 +1,0 @@
-Set<int>Marks = {50,65,87,65};
-print(Marks);
-
-List<int> num1  = [25,256,24,25,24,28,100,100,80,100,69];
-Set<int> num2 = Set.of(num1);
-print(num2);
