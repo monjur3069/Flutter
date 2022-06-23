@@ -24,7 +24,7 @@ class Employee{
         this.email,
         this.address
       }) :
-        assert(NID! > 0),
+        assert(NID! > 0),//initializer list
         assert(name!.length < 20),
         this._mobile = mobile;
   //name constructor
